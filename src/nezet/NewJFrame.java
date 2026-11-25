@@ -32,18 +32,19 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pnlKartya.revalidate();
     }
+
     public void kartyakMegjelenitese() {
-    pnlKartya.removeAll();
+        pnlKartya.removeAll();
 
-    String[] pakli = GondolatOlvasoProgram.getPakli();
+        String[] pakli = GondolatOlvasoProgram.getPakli();
 
-    for (int i = 1; i <= 21; i++) {
-        JLabel kartya = new JLabel(pakli[i]);
-        pnlKartya.add(kartya);
+        for (int i = 1; i <= 21; i++) {
+            JLabel kartya = new JLabel(pakli[i]);
+            pnlKartya.add(kartya);
+        }
+
+        pnlKartya.revalidate();
     }
-
-    pnlKartya.revalidate();
-}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -168,5 +169,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
     public JButton getBtnOszlop3() {
         return btnOszlop3;
+    }
+
+    public void korFrissitese(int kor) {
+        lblKor.setText("Kör: " + kor + "/3");
     }
 }

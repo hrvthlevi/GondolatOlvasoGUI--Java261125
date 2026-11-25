@@ -9,6 +9,7 @@ import nezet.NewJFrame;
 public class Vezerlo {
 
     private NewJFrame nezet;
+    private int kor = 1;
 
     public Vezerlo(NewJFrame nezet) {
         this.nezet = nezet;
@@ -23,6 +24,8 @@ public class Vezerlo {
                 System.out.println("1. oszlop");
                 GondolatOlvasoProgram.kever(1);
                 nezet.kartyakMegjelenitese();
+                kor++;
+                nezet.korFrissitese(kor);
             }
         });
 
@@ -32,6 +35,8 @@ public class Vezerlo {
                 System.out.println("2. oszlop");
                 GondolatOlvasoProgram.kever(2);
                 nezet.kartyakMegjelenitese();
+                kor++;
+                nezet.korFrissitese(kor);
             }
         });
 
@@ -41,6 +46,8 @@ public class Vezerlo {
                 System.out.println("3. oszlop");
                 GondolatOlvasoProgram.kever(3);
                 nezet.kartyakMegjelenitese();
+                kor++;
+                nezet.korFrissitese(kor);
             }
         });
     }
