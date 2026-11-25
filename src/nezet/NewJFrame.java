@@ -32,6 +32,18 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pnlKartya.revalidate();
     }
+    public void kartyakMegjelenitese() {
+    pnlKartya.removeAll();
+
+    String[] pakli = GondolatOlvasoProgram.getPakli();
+
+    for (int i = 1; i <= 21; i++) {
+        JLabel kartya = new JLabel(pakli[i]);
+        pnlKartya.add(kartya);
+    }
+
+    pnlKartya.revalidate();
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

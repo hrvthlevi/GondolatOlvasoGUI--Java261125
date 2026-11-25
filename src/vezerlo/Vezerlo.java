@@ -3,6 +3,7 @@ package vezerlo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import modell.GondolatOlvasoProgram;
 import nezet.NewJFrame;
 
 public class Vezerlo {
@@ -20,6 +21,8 @@ public class Vezerlo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("1. oszlop");
+                GondolatOlvasoProgram.kever(1);
+                nezet.kartyakMegjelenitese();
             }
         });
 
@@ -27,6 +30,8 @@ public class Vezerlo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("2. oszlop");
+                GondolatOlvasoProgram.kever(2);
+                nezet.kartyakMegjelenitese();
             }
         });
 
@@ -34,6 +39,8 @@ public class Vezerlo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("3. oszlop");
+                GondolatOlvasoProgram.kever(3);
+                nezet.kartyakMegjelenitese();
             }
         });
     }
