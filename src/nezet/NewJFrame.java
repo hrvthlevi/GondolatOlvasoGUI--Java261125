@@ -26,17 +26,92 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblCim = new javax.swing.JLabel();
+        lblInstrukcio = new javax.swing.JLabel();
+        lblKor = new javax.swing.JLabel();
+        pnlKartya = new javax.swing.JPanel();
+        btnOszlop1 = new javax.swing.JButton();
+        btnOszlop2 = new javax.swing.JButton();
+        btnOszlop3 = new javax.swing.JButton();
+        lblEredmeny = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lblCim.setText("Gondolvatolvasó Program");
+
+        lblInstrukcio.setText("Gondolj egy kártyára");
+
+        lblKor.setText("Kör:1/3");
+
+        javax.swing.GroupLayout pnlKartyaLayout = new javax.swing.GroupLayout(pnlKartya);
+        pnlKartya.setLayout(pnlKartyaLayout);
+        pnlKartyaLayout.setHorizontalGroup(
+            pnlKartyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
+        pnlKartyaLayout.setVerticalGroup(
+            pnlKartyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 135, Short.MAX_VALUE)
+        );
+
+        btnOszlop1.setText("1. oszlop");
+
+        btnOszlop2.setText("2. oszlop");
+
+        btnOszlop3.setText("3. oszlop");
+
+        lblEredmeny.setText("A gondolt kártyád:...");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblEredmeny)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(pnlKartya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnOszlop1)
+                            .addGap(49, 49, 49)
+                            .addComponent(btnOszlop2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnOszlop3))))
+                .addContainerGap(49, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblKor)
+                        .addGap(194, 194, 194))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblCim)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(lblInstrukcio)))
+                        .addGap(160, 160, 160))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCim)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblInstrukcio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlKartya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOszlop1)
+                    .addComponent(btnOszlop2)
+                    .addComponent(btnOszlop3))
+                .addGap(18, 18, 18)
+                .addComponent(lblEredmeny)
+                .addGap(18, 18, 18)
+                .addComponent(lblKor)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,5 +153,13 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnOszlop1;
+    private javax.swing.JButton btnOszlop2;
+    private javax.swing.JButton btnOszlop3;
+    private javax.swing.JLabel lblCim;
+    private javax.swing.JLabel lblEredmeny;
+    private javax.swing.JLabel lblInstrukcio;
+    private javax.swing.JLabel lblKor;
+    private javax.swing.JPanel pnlKartya;
     // End of variables declaration//GEN-END:variables
 }
