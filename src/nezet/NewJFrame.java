@@ -4,6 +4,10 @@
  */
 package nezet;
 
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import modell.GondolatOlvasoProgram;
+
 /**
  *
  * @author leventehorvath
@@ -15,6 +19,17 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        pnlKartya.setLayout(new GridLayout(0, 3, 5, 5));
+        GondolatOlvasoProgram.feltolt();
+
+        String[] pakli = GondolatOlvasoProgram.getPakli();
+
+        for (int i = 1; i <= 21; i++) {
+            JLabel kartya = new JLabel(pakli[i]);
+            pnlKartya.add(kartya);
+        }
+
+        pnlKartya.revalidate();
     }
 
     /**
@@ -47,7 +62,7 @@ public class NewJFrame extends javax.swing.JFrame {
         pnlKartya.setLayout(pnlKartyaLayout);
         pnlKartyaLayout.setHorizontalGroup(
             pnlKartyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
+            .addGap(0, 150, Short.MAX_VALUE)
         );
         pnlKartyaLayout.setVerticalGroup(
             pnlKartyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,17 +83,14 @@ public class NewJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblEredmeny)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(pnlKartya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnOszlop1)
-                            .addGap(49, 49, 49)
-                            .addComponent(btnOszlop2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnOszlop3))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnOszlop1)
+                    .addComponent(lblEredmeny))
+                .addGap(18, 18, 18)
+                .addComponent(btnOszlop2)
+                .addGap(15, 15, 15)
+                .addComponent(btnOszlop3)
+                .addContainerGap(83, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +102,8 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(lblCim)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addComponent(lblInstrukcio)))
+                                .addComponent(lblInstrukcio))
+                            .addComponent(pnlKartya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(160, 160, 160))))
         );
         layout.setVerticalGroup(
